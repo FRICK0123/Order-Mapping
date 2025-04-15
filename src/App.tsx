@@ -59,7 +59,7 @@ export default function App() {
       <MapContainer center={[9.317988, 123.290297]} zoom={15} style={{ height: '100%', width: '100%' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <MarkerClusterGroup chunkedLoading>
-          {locations.slice(0,20).map((loc, idx) => (
+          {locations.map((loc, idx) => (
             <Marker key={idx} position={[parseFloat(loc.lat), parseFloat(loc.lng)]} icon={smallIcon}>
               <Popup>
                 <div style={{ maxHeight: '200px', overflowY: 'auto', maxWidth: '250px' }}>
